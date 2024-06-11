@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Query Builder
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h1>Query Builder</h1>
+	{% if filtered_count %}
+	<div class="alert alert-success" role="alert">
+		{{filtered_count}} records found for the query.
+	</div>
+	{% endif %}
+	<form action={% url 'query_builder' %}>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label for="exampleFormControlInput1">Search</label>
+					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Keyword">
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="company">Company</label>
+					<select class="form-control" id="company">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="industry">Industry</label>
+					<select class="form-control" id="industry">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label for="year_founded">Year Founded</label>
+					<select class="form-control" id="year_founded">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="city">City</label>
+					<select class="form-control" id="city">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="state">State</label>
+					<select class="form-control" id="state">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label for="country">Country</label>
+					<select class="form-control" id="country">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="employees_from">Employees (From)</label>
+					<select class="form-control" id="employees_from">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="employees_to">Employees (To)</label>
+					<select class="form-control" id="employees_to">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<button type"submit">Query Data</button>
+		<button type"reset">Reset</button>
+	</form>
+</div>
+{% endblock %}

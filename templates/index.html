@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+{% block body %}
+<p><a href='admin/'>Admin Dashboard</a></p>
+<p><a href={% url 'account_login' %}>Login</a></p>
+<p><a href={% url 'account_signup' %}>Signup</a></p>
+<p><a href={% url 'account_reset_password' %}>Forgot Password</a></p>
+<p><a href={% url 'upload_file' %}>Upload File</a></p>
+<p><a href={% url 'query_builder' %}>Query Builder</a></p>
+<p><a href={% url 'users' %}>Users</a></p>
+{% endblock %}
