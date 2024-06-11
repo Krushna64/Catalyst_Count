@@ -6,7 +6,7 @@ Clone the repository:
 
 ```sh
 $ git clone https://github.com/Krushna64/Catalyst_Count.git
-$ cd Catalyst Media Integrated LLP
+$ cd Catalyst_Count
 ```
 
 Create a virtual environment to install dependencies in and activate it:
